@@ -1,0 +1,246 @@
+/* src/App.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.app-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.2rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+.upload-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.upload-label {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border: 2px dashed #cbd5e0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  overflow: hidden;
+}
+
+.upload-label:hover {
+  border-color: #4299e1;
+}
+
+.upload-placeholder {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-placeholder span {
+  font-size: 3rem;
+  color: #a0aec0;
+}
+
+.upload-placeholder p {
+  color: #a0aec0;
+  margin-top: 0.5rem;
+}
+
+.image-preview {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.file-input {
+  display: none;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 0.8rem 1.5rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #3182ce;
+}
+
+.submit-button:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+.error-message {
+  text-align: center;
+  color: #e53e3e;
+  margin: 1rem 0;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #e2e8f0;
+  border-top: 5px solid #4299e1;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.results-container {
+  margin-top: 2rem;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.results-container h2 {
+  text-align: center;
+  color: #2d3748;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.product-info {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.product-description {
+  color: #718096;
+}
+
+.stores-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.store-item {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  border-left: 4px solid #4299e1;
+}
+
+.store-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2d3748;
+  margin-bottom: 0.3rem;
+}
+
+.store-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #38a169;
+  margin-bottom: 0.3rem;
+}
+
+.store-address {
+  color: #718096;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.store-link {
+  display: inline-block;
+  color: #4299e1;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.store-link:hover {
+  text-decoration: underline;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: #a0aec0;
+  font-size: 0.9rem;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .upload-label {
+    width: 250px;
+    height: 250px;
+  }
+
+  .results-container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .upload-label {
+    width: 200px;
+    height: 200px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
